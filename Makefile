@@ -12,7 +12,7 @@
 
 NAME = fdf
 # CC = gcc
-CC = gcc -fsanitize=address
+CC = gcc -fsanitize=address -I/usr/include -Imlx_linux
 # CFLAGS = -Werror -Wall -Wextra
 SRCS = file_to_str.c \
 str_to_t_fdf.c \
@@ -30,8 +30,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	make -C libft
 	$(CC) $(CFLAGS) $(OBJS) \
-	minilibx_macos/libmlx.a \
-	-framework OpenGL -framework AppKit \
+	mlx_linux/libmlx.a \
+	-Lmlx_linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz \
 	libft/libft.a -o $(NAME)
 
 clean:

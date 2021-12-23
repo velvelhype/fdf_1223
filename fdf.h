@@ -8,8 +8,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include "libft/libft.h"
-#include <OpenGL/gl.h>
-#include "minilibx_macos/mlx.h"
+#include "mlx_linux/mlx.h"
 
 // typedef struct	s_data {
 // 	void	*img;

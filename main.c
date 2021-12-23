@@ -2,27 +2,28 @@
 
 int	deal_key(int key, t_fdf *fdf)
 {
-	if (key == 20)
+	printf("key input %d\n", key);
+	if (key == 51)
 		fdf->is_threeD = 1;
-	if (key == 19)
+	if (key == 50)
 		fdf->is_threeD = 0;
-	if (key == 14)
+	if (key == 114)
 		fdf->rotation += 0.03;
-	if (key == 15)
+	if (key == 101)
 		fdf->rotation -= 0.03;
-	if (key == 24)
+	if (key == 61)
 		fdf->zoom += 1;
-	if (key == 27)
+	if (key == 45)
 		fdf->zoom -= 1;
-	if (key == 126)
+	if (key == 65362)
 		fdf->shift_y -= 40;
-	if (key == 125)
+	if (key == 65364)
 		fdf->shift_y += 40;
-	if (key == 123)
+	if (key == 65361)
 		fdf->shift_x -= 40;
-	if (key == 124)
+	if (key == 65363)
 		fdf->shift_x += 40;
-	if (key == 53)
+	if (key == 65307)
 	{
 		system("leaks fdf");
 		exit(0);
@@ -58,6 +59,6 @@ int	main(int argc, char **argv)
 	init_fdf(&fdf);
 	str_to_t_fdf(&fdf, save);
 	draw(&fdf);
-	mlx_hook(fdf.win_ptr, 2, 0, deal_key, &fdf);
+	mlx_hook(fdf.win_ptr, 2, 1L<<0, deal_key, &fdf);
 	mlx_loop(fdf.mlx_ptr);
 }
