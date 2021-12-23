@@ -3,7 +3,6 @@
 # define WIDTH 1000
 # define HEIGHT 800
 # include <math.h>
-# include <stdio.h>
 # include <unistd.h>
 # include <fcntl.h>
 # include "libft/libft.h"

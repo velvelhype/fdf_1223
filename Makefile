@@ -11,12 +11,11 @@
 # **************************************************************************** #
 
 NAME = fdf
-CC = gcc -fsanitize=address -I/usr/include -Imlx_linux
+CC = gcc -I/usr/include -Imlx_linux
 CFLAGS = -Werror -Wall -Wextra
 SRCS = file_to_str.c \
 str_to_t_fdf.c \
 str_to_t_fdf_utils.c \
-check.c \
 draw.c \
 draw_line_pre_process.c \
 draw_make_image.c \
