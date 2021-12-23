@@ -9,13 +9,11 @@ void	ft_strncpy(char *dst, char *src, size_t	n)
 	}
 }
 
-
 void	read_ret_error_check(int	read_ret)
 {
 	if (read_ret == 0 || read_ret == -1)
 		exit(1);
 }
-
 
 char	*read_to_save(int fd, int stack_size, char *save)
 {

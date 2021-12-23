@@ -6,14 +6,13 @@
 #    By: kamori <velvelhype@gmail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/04 03:20:19 by kamori            #+#    #+#              #
-#    Updated: 2021/11/23 04:47:58 by kamori           ###   ########.fr        #
+#    Updated: 2021/12/23 23:07:51 by kamori           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
-# CC = gcc
 CC = gcc -fsanitize=address -I/usr/include -Imlx_linux
-# CFLAGS = -Werror -Wall -Wextra
+CFLAGS = -Werror -Wall -Wextra
 SRCS = file_to_str.c \
 str_to_t_fdf.c \
 str_to_t_fdf_utils.c \
