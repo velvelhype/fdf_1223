@@ -2,7 +2,6 @@
 
 int	deal_key(int key, t_fdf *fdf)
 {
-	printf("key input %d\n", key);
 	if (key == 51)
 		fdf->is_threeD = 1;
 	if (key == 50)
@@ -24,10 +23,7 @@ int	deal_key(int key, t_fdf *fdf)
 	if (key == 65363)
 		fdf->shift_x += 40;
 	if (key == 65307)
-	{
-		system("leaks fdf");
 		exit(0);
-	}
 	draw(fdf);
 	return (0);
 }
@@ -59,6 +55,6 @@ int	main(int argc, char **argv)
 	init_fdf(&fdf);
 	str_to_t_fdf(&fdf, save);
 	draw(&fdf);
-	mlx_hook(fdf.win_ptr, 2, 1L<<0, deal_key, &fdf);
+	mlx_hook(fdf.win_ptr, 2, 1L << 0, deal_key, &fdf);
 	mlx_loop(fdf.mlx_ptr);
 }

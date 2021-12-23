@@ -1,22 +1,13 @@
 #ifndef FDF_H
 # define FDF_H
-#define WIDTH 1000
-#define HEIGHT 800
-
-#include <math.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include "libft/libft.h"
-#include "mlx_linux/mlx.h"
-
-// typedef struct	s_data {
-// 	void	*img;
-// 	char	*addr;
-// 	int		pix_bits;
-// 	int		line_len;
-// 	int		endi;
-// }				t_data;
+# define WIDTH 1000
+# define HEIGHT 800
+# include <math.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include "libft/libft.h"
+# include "mlx_linux/mlx.h"
 
 typedef struct s_point
 {

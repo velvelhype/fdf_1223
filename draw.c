@@ -2,7 +2,7 @@
 
 int	get_light(int start, int end, double percentage)
 {
-	return ((int)((1 - percentage) *start + percentage * end));
+	return ((int)((1 - percentage) * start + percentage * end));
 }
 
 int	pt_col(int cur_col, int ini_col, int end_col, double rate)
