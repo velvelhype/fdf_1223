@@ -1,8 +1,8 @@
 #include "fdf.h"
 
-int	get_light(int start, int end, double percentage)
+int	rated_color(int start, int end, double rate)
 {
-	return ((int)((1 - percentage) * start + percentage * end));
+	return ((int)((1 - rate) * start + rate * end));
 }
 
 int	pt_col(int cur_col, int ini_col, int end_col, double rate)
@@ -13,9 +13,9 @@ int	pt_col(int cur_col, int ini_col, int end_col, double rate)
 
 	if (cur_col == end_col)
 		return (cur_col);
-	red = get_light((ini_col >> 16) & 0xFF, (end_col >> 16) & 0xFF, rate);
-	green = get_light((ini_col >> 8) & 0xFF, (end_col >> 8) & 0xFF, rate);
-	blue = get_light(ini_col & 0xFF, end_col & 0xFF, rate);
+	red = rated_color((ini_col >> 16) & 0xFF, (end_col >> 16) & 0xFF, rate);
+	green = rated_color((ini_col >> 8) & 0xFF, (end_col >> 8) & 0xFF, rate);
+	blue = rated_color(ini_col & 0xFF, end_col & 0xFF, rate);
 	return ((red << 16) | (green << 8) | blue);
 }
 
